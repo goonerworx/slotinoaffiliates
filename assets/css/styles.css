@@ -306,3 +306,55 @@ picture{display:contents}
   .hero{padding-top:32px}
   .scene{max-width:360px}
 }
+
+/* ---------- mobile / tablet hero composition ---------- */
+@media (max-width:900px){
+  .hero{padding-top:20px;padding-bottom:44px}
+  .hero__in{flex-direction:column;align-items:stretch;gap:26px}
+  .hero__art{order:-1;flex:none;width:100%}
+  .hero__copy{flex:none;gap:22px}
+  .hero__copy .chips{order:1;max-width:none}
+  .hero__copy .hero__ctas{order:2}
+  /* banner instead of square */
+  .scene{max-width:none;aspect-ratio:16/10;border-radius:28px}
+  .scene__sun{width:58%;top:46%}
+  .scene__orbit{width:46%;top:46%}
+  .scene__dog{left:24%;right:24%;bottom:6%}
+  .scene__ball--a{left:7%;top:16%}
+  .scene__ball--b{right:8%;top:30%}
+  .water--back{height:30%}.water--front{height:24%}.water--deep{height:15%}
+  .ripples{bottom:13%;width:70%}
+  .spark--1{left:60%;top:30%}.spark--2{left:68%;top:40%}.spark--3{left:40%;top:32%}
+}
+@media (max-width:600px){
+  .hero{padding-top:16px}
+  .hero__in{gap:22px}
+  .scene{aspect-ratio:4/3;border-radius:24px}
+  .scene__sun{width:72%;top:44%}
+  .scene__orbit{width:56%;top:44%}
+  .scene__dog{left:14%;right:14%;bottom:8%}
+  .scene__ball--a svg{width:42px;height:42px}
+  .scene__ball--b svg{width:28px;height:28px}
+  .hero h1{font-size:clamp(36px,10.5vw,48px)}
+  .hero__ctas{gap:10px}
+}
+@media (max-height:500px) and (orientation:landscape){
+  .scene{aspect-ratio:21/9}
+  .scene__dog{left:34%;right:34%}
+}
+@media (min-width:601px) and (max-width:900px){
+  .scene{aspect-ratio:2/1}
+  .scene__dog{left:30%;right:30%;bottom:5%}
+  .scene__sun{width:44%}.scene__orbit{width:34%}
+}
+@media (max-width:900px){
+  .trust__in{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px;padding:22px var(--pad-x)}
+  .trust__item{font-size:15px;gap:10px}
+  .trust__item svg{width:24px;height:24px}
+}
+@media (max-width:600px){
+  .cta{flex-direction:column;align-items:stretch;text-align:left}
+  .cta__art{order:-1;flex:none;margin:-8px 0 -12px}
+  .cta__art img{max-width:240px}
+}
+@media (max-width:600px){.cta{padding:32px 22px 28px}}
