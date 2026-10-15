@@ -115,7 +115,7 @@ p{margin:0}
 .ripple--late{animation-delay:-1.7s}
 .scene__dog{position:absolute;left:8%;right:8%;bottom:10%}
 .dog-bob{width:100%;height:auto;animation:bob 4.2s ease-in-out infinite;transform-origin:50% 92%;will-change:transform}
-.scene:hover .dog-bob{animation-duration:1.6s}
+
 .spark{position:absolute;z-index:4}
 .spark path{animation:twinkle 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 .spark--1{left:61%;top:39%}
@@ -358,3 +358,6 @@ picture{display:contents}
   .cta__art img{max-width:240px}
 }
 @media (max-width:600px){.cta{padding:32px 22px 28px}}
+/* hover: smooth lift on the wrapper, bobbing animation keeps running untouched */
+.scene__dog{transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+@media (hover:hover) and (pointer:fine){.scene:hover .scene__dog{transform:translateY(-8px) scale(1.03)}}
