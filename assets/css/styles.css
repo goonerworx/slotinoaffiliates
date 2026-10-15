@@ -361,3 +361,5 @@ picture{display:contents}
 /* hover: smooth lift on the wrapper, bobbing animation keeps running untouched */
 .scene__dog{transition:transform .45s cubic-bezier(.2,.8,.2,1)}
 @media (hover:hover) and (pointer:fine){.scene:hover .scene__dog{transform:translateY(-8px) scale(1.03)}}
+/* source art is cropped at the sides/bottom of the float ring: fade the hard edges into the scene */
+.dog-bob{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%),linear-gradient(to top,transparent 0,#000 18%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%),linear-gradient(to top,transparent 0,#000 18%);mask-composite:intersect}
