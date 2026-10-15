@@ -369,3 +369,30 @@ picture{display:contents}
 @media (min-width:601px) and (max-width:900px){.scene__dog{left:27%;right:27%;bottom:0}}
 @media (max-width:600px){.scene__dog{left:17%;right:17%;bottom:1%}}
 @media (max-height:500px) and (orientation:landscape){.scene__dog{left:38%;right:38%}}
+
+/* ---------- balanced grids: column counts chosen so rows are always full ---------- */
+/* 4 items: 4 | 2+2 | stacked */
+.trust__in{grid-template-columns:repeat(4,minmax(0,1fr))}
+.steps,.aud{grid-template-columns:repeat(4,minmax(0,1fr))}
+/* 6 items: 3+3 | 2+2+2 | stacked */
+#tools .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* 3 items: 3 | stacked */
+#why .grid,.models{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+@media (max-width:1099px){
+  .steps,.aud{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:1023px){
+  .models{grid-template-columns:minmax(0,1fr);max-width:640px}
+}
+@media (max-width:900px){
+  .trust__in{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #tools .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:767px){
+  #why .grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+  .steps,.aud,#tools .grid{grid-template-columns:minmax(0,1fr)}
+  .models{max-width:none}
+}
