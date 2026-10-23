@@ -396,3 +396,32 @@ picture{display:contents}
   .steps,.aud,#tools .grid{grid-template-columns:minmax(0,1fr)}
   .models{max-width:none}
 }
+
+/* legal pages (terms, privacy, responsible gaming) */
+.legal{padding:clamp(40px,6vw,80px) var(--pad-x) var(--pad-y)}
+.legal__head{max-width:780px;margin-bottom:36px}
+.legal__meta{color:var(--muted);margin-top:16px;font-size:15px}
+.legal__meta a{color:var(--pink);font-weight:700}
+.legal__body{max-width:840px}
+.legal__body h2{font-weight:800;font-size:clamp(22px,2.4vw,30px);line-height:1.15;letter-spacing:-.015em;margin:56px 0 20px;padding-top:28px;border-top:1px solid var(--line)}
+.legal__body h3{font-weight:700;font-size:19px;line-height:1.3;margin:32px 0 14px}
+.legal__body p,.legal__body li{color:var(--text-2);font-size:16px;line-height:1.65}
+.legal__body strong{color:var(--text)}
+.art{margin:0 0 22px}
+.art p+p{margin-top:8px}
+.art__num{font-family:var(--display);font-weight:800}
+.legal__body ul,.legal__body ol{margin:10px 0 0;padding-left:24px;display:flex;flex-direction:column;gap:8px}
+.legal__body ul{list-style:none;padding-left:0}
+.legal__body ul li{position:relative;padding-left:22px}
+.legal__body ul li::before{content:"";position:absolute;left:4px;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--pink)}
+.legal__body ol li::marker{color:var(--pink);font-weight:800}
+.legal__p{margin-top:16px}
+.toc{margin:0 0 8px;padding:24px 26px;max-width:840px;background:var(--surface);border:1px solid var(--line-2);border-radius:24px}
+.toc__title{font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:12px}
+.toc ol{margin:0;padding:0;list-style:none;columns:2;column-gap:32px;font-size:15px;font-weight:600}
+.toc li{break-inside:avoid;border-bottom:1px solid var(--line)}
+.toc a{display:flex;gap:12px;min-height:44px;align-items:center;color:var(--text-2)}
+.toc a:hover{color:#fff}
+.toc__n{flex:none;min-width:34px;color:var(--pink);font-family:var(--display);font-weight:800}
+@media (max-width:600px){.toc{padding:16px 18px;border-radius:18px}.toc ol{columns:1}.legal__body h2{margin-top:44px;padding-top:24px}.legal__head{margin-bottom:28px}}
+@media print{.header,.footer,.toc,.skip-link{display:none}body{background:#fff;color:#000;font-size:11pt}.legal{padding:0}.legal__body p,.legal__body li,.legal__body strong,.legal__meta,.art__num{color:#000}.legal__body h2{border-top-color:#999;break-after:avoid}.art{break-inside:avoid}}
